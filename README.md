@@ -31,8 +31,7 @@ The course runs for 10 weeks, from Python and LLM basics through RAG, agents, ev
 ├── 00-python-oop-refresher/    # OOP in Python vs Java (notes + notebook)
 ├── 01-python-for-ai/           # Python for AI: day-wise learning notes, pandas, data loading
 ├── 02-rag-foundations/         # RAG foundations: vectors & embeddings
-├── data/                       # Local datasets (git-ignored, download from Kaggle)
-└── Modelfile.python            # Ollama "AI Coach" model (DeepSeek-R1 32B)
+└── data/                       # Local datasets (git-ignored, download from Kaggle)
 ```
 
 ---
@@ -50,16 +49,6 @@ pip install jupyter numpy pandas
 ```
 
 Use VS Code or PyCharm with the Python and Jupyter extensions.
-
-### 🤖 Local AI Coach (Ollama)
-
-[`Modelfile.python`](Modelfile.python) turns the local **DeepSeek-R1 32B** model into a personal AI engineering coach. Set up `deepseek-r1:32b-q3` first (see [Local LLM for RAG work](#-local-llm-for-rag-work-ollama) below). It answers in modern Python 3.12+ with strict type hints, uses Pydantic for validation, and always returns complete code.
-
-```bash
-# Make sure Ollama is running and deepseek-r1:32b-q3 is pulled, then:
-ollama create ai-coach -f ./Modelfile.python
-ollama run ai-coach
-```
 
 ### 🧠 Local LLM for RAG work (Ollama)
 
