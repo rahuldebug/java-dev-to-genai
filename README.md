@@ -61,6 +61,34 @@ ollama create ai-coach -f ./Modelfile.python
 ollama run ai-coach
 ```
 
+### 🧠 Local LLM for RAG work (Ollama)
+
+All RAG work in this repo runs on a local **DeepSeek-R1-Distill-Qwen-32B** model (Q3_K_M GGUF, ~16 GB) on a Mac mini M4 Pro with 24 GB of unified memory. It runs fully on the GPU at about 8 tokens/s.
+
+```bash
+# 1. Pull the model and give it a short local name
+ollama pull hf.co/bartowski/DeepSeek-R1-Distill-Qwen-32B-GGUF:Q3_K_M
+ollama cp hf.co/bartowski/DeepSeek-R1-Distill-Qwen-32B-GGUF:Q3_K_M deepseek-r1:32b-q3
+
+# 2. Let the GPU use up to 18 GB of unified memory (resets on reboot, so re-run after restarting)
+sudo sysctl iogpu.wired_limit_mb=18432
+
+# 3. Lean KV cache for the Ollama menu-bar app, then quit and reopen the app
+launchctl setenv OLLAMA_FLASH_ATTENTION 1
+launchctl setenv OLLAMA_KV_CACHE_TYPE q8_0
+launchctl setenv OLLAMA_CONTEXT_LENGTH 4096
+
+# 4. Check it
+ollama run deepseek-r1:32b-q3 --verbose
+ollama ps   # PROCESSOR should show 100% GPU
+```
+
+Things to remember when using it in a RAG pipeline:
+
+- **Strip the `<think>…</think>` block.** R1 prints its reasoning before the answer, so remove that block before showing or parsing the output.
+- **Keep the retrieved context small.** The context window is 4096 tokens, so the top-k chunks plus the question must fit inside it.
+- **Use a separate embedding model.** DeepSeek-R1 generates text and isn't meant for embeddings. Use a dedicated model such as `nomic-embed-text` (`ollama pull nomic-embed-text`) for the vector store.
+
 ---
 
 ## 📝 Notes
