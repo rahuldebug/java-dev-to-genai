@@ -32,8 +32,7 @@ The course runs for 10 weeks, from Python and LLM basics through RAG, agents, ev
 ├── 01-python-for-ai/           # Python for AI: day-wise learning notes, pandas, data loading
 ├── 02-rag-foundations/         # RAG foundations: vectors & embeddings
 ├── data/                       # Local datasets (git-ignored, download from Kaggle)
-├── Modelfile.python            # Ollama "AI Coach" model (Qwen 2.5 Coder 14B)
-└── codestral-java-lead.Modelfile  # Ollama Codestral model tuned as a Java lead
+└── Modelfile.python            # Ollama "AI Coach" model (Qwen 2.5 Coder 14B)
 ```
 
 ---
