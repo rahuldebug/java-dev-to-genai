@@ -10,17 +10,17 @@ The course runs for 10 weeks, from Python and LLM basics through RAG, agents, ev
 
 | Week | Topic | Status | Folder |
 |------|-------|--------|--------|
-| Pre | Python OOP refresher for Java developers | ✅ Done | [`preo_week_oops_in_python/`](preo_week_oops_in_python/) |
-| 1 | **Python for AI & LLM fundamentals**: async APIs, streaming, transformer internals, LLM lifecycle | ✅ Done | [`week1/`](week1/) |
-| 2 | **RAG foundations**: embeddings & vector geometry, vector DBs, indexing, chunking | 🟡 In progress | [`week2/`](week2/) |
-| 3 | **Enterprise RAG**: hybrid search, cross-encoder re-ranking, query expansion, graph RAG | ⏳ Upcoming | `week3/` |
-| 4 | **Agents & state machines**: ReAct loop, reliable tool calling, LangGraph | ⏳ Upcoming | `week4/` |
-| 5 | **Evals**: golden datasets, LLM-as-judge, evaluating agents / RAG / tool calls | ⏳ Upcoming | `week5/` |
-| 6 | **MCP & multi-agent orchestration**: context engineering, memory, orchestration patterns | ⏳ Upcoming | `week6/` |
-| 7 | **ML fundamentals & fine-tuning**: core math, LoRA / QLoRA, dataset engineering, quantization | ⏳ Upcoming | `week7/` |
-| 8 | **Agentic system design & reliability**: scaling, multi-agent topologies, AI security, fallbacks | ⏳ Upcoming | `week8/` |
-| 9 | **Multimodal AI** & capstone kickoff | ⏳ Upcoming | `week9/` |
-| 10 | **Capstone finale & demo day** (Nov 28–29) | ⏳ Upcoming | `capstone/` |
+| Pre | Python OOP refresher for Java developers | ✅ Done | [`00-python-oop-refresher/`](00-python-oop-refresher/) |
+| 1 | **Python for AI & LLM fundamentals**: async APIs, streaming, transformer internals, LLM lifecycle | ✅ Done | [`01-python-for-ai/`](01-python-for-ai/) |
+| 2 | **RAG foundations**: embeddings & vector geometry, vector DBs, indexing, chunking | 🟡 In progress | [`02-rag-foundations/`](02-rag-foundations/) |
+| 3 | **Enterprise RAG**: hybrid search, cross-encoder re-ranking, query expansion, graph RAG | ⏳ Upcoming | `03-enterprise-rag/` |
+| 4 | **Agents & state machines**: ReAct loop, reliable tool calling, LangGraph | ⏳ Upcoming | `04-agents-and-langgraph/` |
+| 5 | **Evals**: golden datasets, LLM-as-judge, evaluating agents / RAG / tool calls | ⏳ Upcoming | `05-evals/` |
+| 6 | **MCP & multi-agent orchestration**: context engineering, memory, orchestration patterns | ⏳ Upcoming | `06-mcp-and-multi-agent/` |
+| 7 | **ML fundamentals & fine-tuning**: core math, LoRA / QLoRA, dataset engineering, quantization | ⏳ Upcoming | `07-ml-and-fine-tuning/` |
+| 8 | **Agentic system design & reliability**: scaling, multi-agent topologies, AI security, fallbacks | ⏳ Upcoming | `08-agentic-system-design/` |
+| 9 | **Multimodal AI** & capstone kickoff | ⏳ Upcoming | `09-multimodal-ai/` |
+| 10 | **Capstone finale & demo day** (Nov 28–29) | ⏳ Upcoming | `10-capstone/` |
 
 ---
 
@@ -28,9 +28,9 @@ The course runs for 10 weeks, from Python and LLM basics through RAG, agents, ev
 
 ```
 .
-├── preo_week_oops_in_python/   # OOP in Python vs Java (notes + notebook)
-├── week1/                      # Python for AI: day-wise learning notes, pandas, data loading
-├── week2/                      # RAG foundations: vectors & embeddings
+├── 00-python-oop-refresher/    # OOP in Python vs Java (notes + notebook)
+├── 01-python-for-ai/           # Python for AI: day-wise learning notes, pandas, data loading
+├── 02-rag-foundations/         # RAG foundations: vectors & embeddings
 ├── data/                       # Local datasets (git-ignored, download from Kaggle)
 ├── Modelfile.python            # Ollama "AI Coach" model (Qwen 2.5 Coder 14B)
 └── codestral-java-lead.Modelfile  # Ollama Codestral model tuned as a Java lead
